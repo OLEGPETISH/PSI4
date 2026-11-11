@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Конвертер валют НБМ</string>
+    <string name="tab_converter">Конвертер</string>
+    <string name="tab_weekly">Неделя (7 дн.)</string>
+    <string name="tab_monthly">Месяц (30 дн.)</string>
+    <string name="btn_convert">Конвертировать</string>
+    <string name="btn_refresh">Обновить курсы</string>
+</resources>

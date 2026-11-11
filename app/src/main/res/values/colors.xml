@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_blue">#1E3A8A</color>
+    <color name="primary_blue_dark">#172554</color>
+    <color name="accent_indigo">#2563EB</color>
+    <color name="bg_surface">#F1F5F9</color>
+    <color name="card_white">#FFFFFF</color>
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#475569</color>
+    <color name="trend_up_green">#15803D</color>
+    <color name="trend_down_red">#B91C1C</color>
+    <color name="trend_flat_gray">#475569</color>
+</resources>
