@@ -1,0 +1,28 @@
+# Gradle & Android build artifacts
+.gradle/
+build/
+app/build/
+*/build/
+local.properties
+
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+output.json
+
+# Compiled Java & Android binaries
+*.class
+*.dex
+*.apk
+*.ap_
+*.aab
+
+# OS files
+.DS_Store
+Thumbs.db
