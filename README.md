@@ -16,6 +16,19 @@
 
 Источником курсов служит [официальный XML-сервис НБМ](https://www.bnm.md/en/official_exchange_rates?get_xml=1).
 
+## 📱 Скриншоты
+
+<table>
+  <tr>
+    <td align="center"><strong>Главный экран</strong><br><img src="image.png" alt="Главный экран приложения" width="220"></td>
+    <td align="center"><strong>Конвертация</strong><br><img src="app-screenshots/converter-example.png" alt="Экран конвертации валют" width="220"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Аналитика за неделю</strong><br><img src="app-screenshots/weekly-analytics.png" alt="График и статистика за 7 дней" width="220"></td>
+    <td align="center"><strong>Аналитика за месяц</strong><br><img src="app-screenshots/monthly-analytics.png" alt="График и статистика за 30 дней" width="220"></td>
+  </tr>
+</table>
+
 ## 🧰 Требования
 
 - Windows, macOS или Linux
