@@ -1,0 +1,100 @@
+# 💱 Конвертер валют НБМ
+
+Нативное Android-приложение на Java для конвертации валют по официальным курсам Национального банка Молдовы и анализа динамики курсов.
+
+![Java 17](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&logoColor=white)
+![Android API 24+](https://img.shields.io/badge/Android-API%2024%2B-3DDC84?logo=android&logoColor=white)
+![JUnit 4](https://img.shields.io/badge/tests-JUnit%204-25A162?logo=junit5&logoColor=white)
+
+## ✨ Возможности
+
+- **Конвертация валют** по официальным курсам НБМ: выбор валютной пары, смена направления и быстрый ввод суммы.
+- **Корректные расчёты** с `BigDecimal`, включая номиналы валют и кросс-курсы.
+- **Аналитика за 7 и 30 дней**: интерактивный график, минимум, максимум, среднее, изменение и направление тренда.
+- **Работа без интернета**: курсы сохраняются в локальный кэш, а дата данных показывается в приложении.
+- **Обработка выходных**: при отсутствии котировки приложение ищет последний доступный рабочий день.
+
+Источником курсов служит [официальный XML-сервис НБМ](https://www.bnm.md/en/official_exchange_rates?get_xml=1).
+
+## 📱 Скриншоты
+
+<table>
+  <tr>
+    <td align="center"><strong>Главный экран</strong><br><img src="image.png" alt="Главный экран приложения" width="220"></td>
+    <td align="center"><strong>Конвертация</strong><br><img src="app-screenshots/converter-example.png" alt="Экран конвертации валют" width="220"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Аналитика за неделю</strong><br><img src="app-screenshots/weekly-analytics.png" alt="График и статистика за 7 дней" width="220"></td>
+    <td align="center"><strong>Аналитика за месяц</strong><br><img src="app-screenshots/monthly-analytics.png" alt="График и статистика за 30 дней" width="220"></td>
+  </tr>
+</table>
+
+## 🧰 Требования
+
+- Windows, macOS или Linux
+- JDK 17 или новее
+- Android SDK 36
+- Android-эмулятор или устройство с Android 7.0 (API 24) или новее
+
+Для разработки и запуска приложения удобно использовать Android Studio. Для запуска команд Gradle достаточно установленного JDK; Gradle Wrapper входит в репозиторий.
+
+## 🚀 Сборка и запуск
+
+Откройте терминал в корневой папке репозитория.
+
+### Windows (PowerShell)
+
+```powershell
+.\gradlew.bat test
+.\gradlew.bat assembleDebug
+```
+
+### macOS / Linux
+
+```bash
+./gradlew test
+./gradlew assembleDebug
+```
+
+Debug APK будет создан здесь:
+
+```text
+app/build/outputs/apk/debug/app-debug.apk
+```
+
+Чтобы установить приложение, сначала запустите эмулятор или подключите Android-устройство с включённой отладкой по USB, затем выполните:
+
+```powershell
+.\gradlew.bat installDebug
+```
+
+На macOS/Linux используйте `./gradlew installDebug`. Также можно открыть папку проекта в Android Studio, выбрать устройство и нажать **Run**.
+
+## 🧪 Тесты
+
+Unit-тесты JUnit 4 проверяют XML-парсер НБМ, расчёты конвертации и аналитики, валидацию ввода и локальный кэш.
+
+```powershell
+.\gradlew.bat test
+```
+
+На macOS/Linux:
+
+```bash
+./gradlew test
+```
+
+## 🏗️ Структура проекта
+
+| Пакет | Назначение |
+| --- | --- |
+| `core` | Парсинг XML, конвертация, валидация и расчёт статистики |
+| `data` | Загрузка курсов НБМ и локальный исторический кэш |
+| `model` | Модели валют, курсов и результатов аналитики |
+| `ui` | Основной экран приложения и график динамики курсов |
+
+Тесты находятся в `app/src/test`. Спецификация и план разработки — в [`specs/001-currency-converter/`](specs/001-currency-converter/), подробный отчёт — в [`REPORT.md`](REPORT.md).
+
+## 📋 О проекте
+
+Лабораторная работа №4: перенос проекта конвертера на Android с Python/Tkinter на Java и расширение его аналитикой курсов за неделю и месяц. Архитектура и задачи разработки подготовлены в формате Spec-Driven Development.
